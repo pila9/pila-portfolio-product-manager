@@ -184,7 +184,7 @@ export const techTags = [
   'Git',
 ]
 
-export const resumeUrl = '/cv.pdf'
+export const resumeUrl = '/Pila-PO-FD.pdf'
 
 export const projects: Project[] = [
   {
@@ -507,10 +507,10 @@ export const experiences: ExperienceItem[] = [
     description:
       'Spearheaded end-to-end development of 2D/3D applications (Mobile/Windows) and Mixed Reality (VR) experiences. Led UI/UX design for immersive environments, creating intuitive interfaces and animations to enhance user engagement.',
     achievements: [
-      'Led full lifecycle development of 2D/3D applications for Mobile and Windows platforms',
-      'Designed UI/UX for immersive VR environments with intuitive interfaces and animations',
-      'Optimized performance through lightweight packaging, profiling, and iterative testing (frame rate optimization, asset compression)',
-      'Conducted research on new technologies related to real estate VR applications',
+      'Spearheaded end-to-end development of 2D/3D applications (Mobile/Windows) and Mixed Reality (VR) experiences, aligning technical execution with user needs and business objectives.',
+      'Led UI/UX design for immersive environments, creating intuitive 2D/3D interfaces and animations to enhance user engagement.',
+      'Optimized performance through lightweight packaging, performance profiling, and iterative testing (e.g., frame rate optimization, asset compression).',
+      'Learn and research new function, new technology related to real estate.'
     ],
   },
   {
