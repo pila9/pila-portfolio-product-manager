@@ -70,7 +70,7 @@ export interface Project {
   title: string
   subtitle: string
   description: string
-  image: string
+  image?: string
   techStack: string[]
   links: {
     live?: string
@@ -185,7 +185,7 @@ export const projects: Project[] = [
     subtitle: 'Digital Wallet Operations Portal',
     description:
       'A secure, role-based operations portal for managing the UMPay digital wallet and payment ecosystem. It provides an analytics dashboard for member growth, transaction volume, balances, online activity, and top currencies; detailed user and merchant administration; KYC verification; deposits, withdrawals, payment methods, gateway orders, callback tracking, and exchange rates. Teams can also manage fee reports and Excel/PDF exports, promotions, vouchers, agents, banners, card settings, and operational appeals. Security includes role-based permissions, JWT authentication, Google 2FA, reCAPTCHA, and activity controls, with English, Thai, Chinese, Japanese, and Malay support.',
-    image: 'https://placehold.co/800x600/1e293b/ffffff?text=UMPay+Admin+Web',
+    image: '/projects/umpay-admin.png',
     techStack: ['Vue.js 2', 'Vue Router', 'Vuex', 'Element UI', 'Axios', 'ApexCharts', 'Vue I18n', 'Laravel 8 REST APIs'],
     links: {
       live: 'https://umpay.com/admin',
@@ -227,7 +227,7 @@ export const projects: Project[] = [
     subtitle: 'Digital Wallet Marketing Website',
     description:
       'The public marketing website for the UMPay digital wallet platform, introducing the product, explaining core financial services, and guiding visitors to register or download the mobile app. Its responsive product pages, visual walkthroughs, video tutorials, and FAQs cover wallet, payment, security, and transaction-management features, alongside dedicated pages for deposits, withdrawals, transfers, and buying/selling. The site also provides social and customer-support access, country and currency availability, English, Thai, and Chinese languages, and localized Terms & Conditions, Privacy Policy, and AML policies.',
-    image: 'https://placehold.co/800x600/1e293b/ffffff?text=UMPay+Landing',
+    image: '/projects/umpay-landing.png',
     techStack: ['React 18', 'TypeScript', 'React Router', 'Tailwind CSS', 'Webpack', 'Internal UI/API/i18n'],
     links: {
       live: 'https://umpay.com/landing',
@@ -241,7 +241,7 @@ export const projects: Project[] = [
     subtitle: 'Marketplace Operations Dashboard',
     description:
       'A centralized, responsive back-office platform for managing a service marketplace. Operations teams can monitor date-based order and payment analytics; manage vendors, KYC reviews, and service assignments; review client profiles, addresses, cancellations, and support cases; and oversee the full order lifecycle, payment reviews, refunds, and printable records. It also manages the service catalogue, categories, attributes, recommendations, banners, announcements, discounts, promo codes, tax/VAT, currencies, payment percentages, app versions, role-based access, audit logs, real-time admin notifications, and multilingual content.',
-    image: 'https://placehold.co/800x600/1e293b/ffffff?text=Orkun+Admin',
+    image: '/projects/orkun-admin.svg',
     techStack: ['Next.js', 'React', 'Material UI', 'Redux Toolkit', 'Axios', 'Charting Tools', 'Laravel Admin API'],
     links: {
       live: 'https://orkun-app.com/admin',
@@ -255,7 +255,7 @@ export const projects: Project[] = [
     subtitle: 'Customer Booking Application',
     description:
       'A mobile-first customer application for discovering, booking, and tracking on-demand services inside a host mobile environment. Customers can browse promotional banners, categories, top services, and service details; search and save favourites; book services with options, quantities, personal details, and address selection; and manage saved addresses with map and current-location support. It provides real-time order-progress tracking, booking and payment histories, notifications, in-order vendor contact, and web-to-native bridge controls for location, navigation, and closing the embedded experience.',
-    image: 'https://placehold.co/800x600/1e293b/ffffff?text=Orkun+Mini+App',
+    image: '/projects/orkun-mini-app.png',
     techStack: ['React', 'TypeScript', 'React Router', 'Tailwind CSS', 'Pusher', 'Webpack', 'REST API'],
     links: {
       live: 'https://orkun-app.com',
@@ -269,7 +269,7 @@ export const projects: Project[] = [
     subtitle: 'Home-Service Marketplace Website',
     description:
       'The public-facing website for Orkun, a Cambodia-based home-service marketplace connecting customers with trusted local providers. It explains how to find, compare, and book services such as cleaning, repairs, moving, air-conditioner servicing, and photography. The site highlights scheduled bookings, certified vendors, direct communication, secure deposits, real-time updates, and customer support, with app screenshots and download calls to action. It also includes the company mission and vision, contact information, privacy policy, terms and conditions, search and social metadata, a sitemap, and responsive layouts for desktop and mobile.',
-    image: 'https://placehold.co/800x600/1e293b/ffffff?text=Orkun+Landing',
+    image: '/projects/orkun-landing.png',
     techStack: ['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'jQuery', 'Swiper', 'Font Awesome'],
     links: {},
     certificate: '/certificates/orkun-project.pdf',
@@ -280,7 +280,7 @@ export const projects: Project[] = [
     subtitle: 'Cambodia E-Commerce Platform',
     description:
       'A Cambodia-focused e-commerce and loyalty platform that connects customers with products, merchants, promotions, vouchers, and rewards. Customers can browse multi-merchant catalogues and stores, discover flash deals and popular products, save items, manage a cart, apply coupons, and complete single-product or multi-merchant orders through ABA Pay, cards, Wing, and Pi Pay, including full and down payments. Account features include authentication with Apple sign-in, order history, reward points, saved products, messages, reviews, followed merchants, profile updates, and help-centre support. The mobile-responsive, PWA-ready experience supports English and Khmer, analytics, and lazy-loaded media.',
-    image: 'https://placehold.co/800x600/1e293b/ffffff?text=iOneCards',
+    image: '/projects/ionecards.png',
     techStack: ['Nuxt.js 2', 'Vue.js', 'Vuex', 'Axios', 'Bootstrap', 'Vue I18n', 'PWA', 'JWT Authentication', 'iOneCards API'],
     links: {
       live: 'https://ione-cards.com',

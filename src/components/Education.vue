@@ -57,11 +57,6 @@ const trainingItems = computed(() =>
                     {{ item.description }}
                   </p>
                 </div>
-                <div
-                  class="flex items-center px-3 py-1 bg-slate-900/50 border border-slate-700/50 rounded-full text-sm text-slate-300"
-                >
-                  Degree
-                </div>
               </div>
             </div>
           </div>
@@ -94,11 +89,6 @@ const trainingItems = computed(() =>
                   <p class="text-slate-400 text-sm">
                     {{ item.period }}
                   </p>
-                </div>
-                <div
-                  class="flex items-center px-3 py-1 bg-slate-900/50 border border-slate-700/50 rounded-full text-sm text-slate-300"
-                >
-                  Certificate
                 </div>
               </div>
             </div>

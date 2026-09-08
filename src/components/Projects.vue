@@ -24,11 +24,13 @@ import { projects } from '@/data/portfolioData'
         >
           <div class="grid lg:grid-cols-2 gap-0">
             <!-- Image -->
-            <div class="relative aspect-[16/9] lg:aspect-auto lg:h-full overflow-hidden">
+           <div
+             v-if="project.image"
+             class="relative aspect-[16/9] lg:aspect-auto lg:h-full overflow-hidden">
               <img
                 :src="project.image"
                 :alt="project.title"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                class="w-full h-full object-contain transition-transform duration-500"
                 loading="lazy"
               />
               <div
@@ -44,7 +46,12 @@ import { projects } from '@/data/portfolioData'
             </div>
 
             <!-- Content -->
-            <div class="p-8 space-y-5">
+            <div
+              :class="[
+                'p-8 space-y-5',
+                project.image ? 'lg:col-span-1' : 'lg:col-span-2',
+              ]"
+            >
               <div>
                 <div class="flex items-baseline gap-3 mb-1">
                   <h3
