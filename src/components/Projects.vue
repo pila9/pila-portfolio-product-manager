@@ -80,7 +80,32 @@ import { projects } from '@/data/portfolioData'
               </div>
 
               <div
-                v-if="project.links?.live"
+                v-if="project.privacy"
+                class="flex items-center gap-4 pt-2"
+              >
+                <span
+                  class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-300 bg-slate-900/50 border border-slate-700/50 rounded-lg"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 15V17M12 11V13M18 12C18 19 12 21 12 21C12 21 6 19 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12Z"
+                      stroke="#94a3bc"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  It's Privacy
+                </span>
+              </div>
+              <div
+                v-else-if="project.links?.live"
                 class="flex items-center gap-4 pt-2"
               >
                 <a
@@ -101,7 +126,7 @@ import { projects } from '@/data/portfolioData'
                       fill="#FBBF24"
                     />
                   </svg>
-                  View Project
+                  {{ project.buttonText || 'View Project' }}
                 </a>
               </div>
             </div>

@@ -72,6 +72,8 @@ export interface Project {
   description: string
   image?: string
   techStack: string[]
+  privacy?: boolean
+  buttonText?: string
   links: {
     live?: string
     github?: string
@@ -187,6 +189,7 @@ export const projects: Project[] = [
       'A secure, role-based operations portal for managing the UMPay digital wallet and payment ecosystem. It provides an analytics dashboard for member growth, transaction volume, balances, online activity, and top currencies; detailed user and merchant administration; KYC verification; deposits, withdrawals, payment methods, gateway orders, callback tracking, and exchange rates. Teams can also manage fee reports and Excel/PDF exports, promotions, vouchers, agents, banners, card settings, and operational appeals. Security includes role-based permissions, JWT authentication, Google 2FA, reCAPTCHA, and activity controls, with English, Thai, Chinese, Japanese, and Malay support.',
     image: '/projects/umpay-admin.png',
     techStack: ['Vue.js 2', 'Vue Router', 'Vuex', 'Element UI', 'Axios', 'ApexCharts', 'Vue I18n', 'Laravel 8 REST APIs'],
+    privacy: true,
     links: {
       live: 'https://umpay.com/admin',
       github: 'https://github.com/sanpila/umpay-admin',
@@ -201,6 +204,7 @@ export const projects: Project[] = [
       'A customer-facing checkout portal for completing payments through the UMPay mobile wallet. It securely retrieves merchant order details and presents a QR code or mobile deep link, showing the amount, currency, merchant, product, purchase-order number, and payment-expiry countdown. The responsive desktop and mobile experience includes live payment-status updates via Pusher, success, failure, expired, and service-unavailable states, detailed digital receipts with invoice/reference information, merchant redirects after completion, and receipt image downloads and sharing.',
     image: 'https://placehold.co/800x600/1e293b/ffffff?text=UMPay+Gateway',
     techStack: ['React 18', 'TypeScript', 'React Router', 'Tailwind CSS', 'QRCode React', 'Pusher', 'Webpack', 'Internal API/i18n'],
+    privacy: true,
     links: {
       live: 'https://umpay.com/gateway',
       github: 'https://github.com/sanpila/umpay-gateway',
@@ -215,6 +219,7 @@ export const projects: Project[] = [
       'The customer-facing web application for the UMPay digital wallet, enabling users to manage funds, make payments, transfer money, and access wallet services from a responsive browser interface. It includes secure registration, password recovery, PIN setup, and two-factor authentication; balances, bills, transaction records, and real-time notifications; deposit and withdrawal flows with fees, status tracking, and receipts; wallet-to-wallet, bank, UnionPay, and Alipay transfers; QR-code generation and scanning; currency exchange and multi-currency wallets; KYC and membership access; UMPay card management; vouchers, payment-account settings, customer service, and multilingual support.',
     image: 'https://placehold.co/800x600/1e293b/ffffff?text=UMPay+Web',
     techStack: ['React 18', 'TypeScript', 'React Router', 'Tailwind CSS', 'Pusher', 'QR-code Libraries', 'Recharts', 'Webpack', 'Internal REST API/i18n/UI'],
+    privacy: true,
     links: {
       live: 'https://umpay.com',
       github: 'https://github.com/sanpila/umpay-web',
@@ -243,6 +248,7 @@ export const projects: Project[] = [
       'A centralized, responsive back-office platform for managing a service marketplace. Operations teams can monitor date-based order and payment analytics; manage vendors, KYC reviews, and service assignments; review client profiles, addresses, cancellations, and support cases; and oversee the full order lifecycle, payment reviews, refunds, and printable records. It also manages the service catalogue, categories, attributes, recommendations, banners, announcements, discounts, promo codes, tax/VAT, currencies, payment percentages, app versions, role-based access, audit logs, real-time admin notifications, and multilingual content.',
     image: '/projects/orkun-admin.svg',
     techStack: ['Next.js', 'React', 'Material UI', 'Redux Toolkit', 'Axios', 'Charting Tools', 'Laravel Admin API'],
+    privacy: true,
     links: {
       live: 'https://orkun-app.com/admin',
       github: 'https://github.com/sanpila/orkun-admin',
@@ -257,6 +263,7 @@ export const projects: Project[] = [
       'A mobile-first customer application for discovering, booking, and tracking on-demand services inside a host mobile environment. Customers can browse promotional banners, categories, top services, and service details; search and save favourites; book services with options, quantities, personal details, and address selection; and manage saved addresses with map and current-location support. It provides real-time order-progress tracking, booking and payment histories, notifications, in-order vendor contact, and web-to-native bridge controls for location, navigation, and closing the embedded experience.',
     image: '/projects/orkun-mini-app.png',
     techStack: ['React', 'TypeScript', 'React Router', 'Tailwind CSS', 'Pusher', 'Webpack', 'REST API'],
+    buttonText: 'Available on ABA App',
     links: {
       live: 'https://orkun-app.com',
       github: 'https://github.com/sanpila/orkun-mini-app',
@@ -309,6 +316,7 @@ export const projects: Project[] = [
       'A multilingual, responsive digital-entertainment platform for discovering music, artists, albums, top charts, new releases, and audiobooks, seamlessly connected with the Gorden/E-Play mobile ecosystem. Its large media catalogue is easy to explore across countries, genres, and content types. Users can search songs, artists, albums, and audiobooks; view detailed content pages; play audio; create collections; and share or continue content through QR codes and mobile deep links. It supports more than 30 languages and is deployed as a Dockerized static site with Nginx.',
     image: 'https://placehold.co/800x600/1e293b/ffffff?text=Gorden+Web',
     techStack: ['Nuxt.js', 'Vue.js', 'Vuetify', 'Vuex', 'REST API', 'Docker', 'Nginx'],
+    privacy: true,
     links: {
       live: 'https://gorden.com',
       github: 'https://github.com/sanpila/gorden-web',
@@ -322,6 +330,7 @@ export const projects: Project[] = [
       'A secure operations dashboard for managing a voting and prediction platform. Administrators can oversee the complete topic lifecycle—from preview and publishing through active voting, closing, settlement, and deletion—while monitoring user activity and financial game data. It includes role-based access, account and user management, report and appeal moderation, blacklists, maintenance controls, configurable whitelists, categories, tags, countries, languages, announcements, game settings, and payment/channel limits. Financial operations cover user bets, income, commissions, service fees, cashback, wallet balances, and balance adjustments in a scalable, multi-currency system with secure authentication and audit-friendly controls.',
     image: 'https://placehold.co/800x600/1e293b/ffffff?text=Voting+Admin',
     techStack: ['React', 'TypeScript', 'Material UI', 'Node.js', 'TypeScript API', 'Multi-currency'],
+    privacy: true,
     links: {},
     certificate: '/certificates/voting-music.pdf',
   },
@@ -333,6 +342,7 @@ export const projects: Project[] = [
       'A back-office platform for managing BusinessFlow digital-payment and card-services operations. It gives teams a centralized workspace to oversee users, KYC applications, issued-card requests, card stock, transactions, fees, currencies, content, and platform settings. Key capabilities include role-based access, secure administrator account controls, customer and KYC review workflows, card applications and transaction management, transaction-history reporting, configurable spending limits and fees, multilingual settings, announcements, banners, and maintenance-mode controls. Its modular, permission-aware design keeps day-to-day financial workflows secure, clear, and manageable.',
     image: 'https://placehold.co/800x600/1e293b/ffffff?text=OFL+Admin',
     techStack: ['React', 'TypeScript', 'React Router', 'Material UI', 'Tailwind CSS', 'Recharts', 'Webpack'],
+    privacy: true,
     links: {},
   },
   {
@@ -343,6 +353,7 @@ export const projects: Project[] = [
       'An open-source, self-hosted customer engagement platform that centralizes messages from web chat, email, WhatsApp, social media, and APIs into a shared inbox. Contributed to the Vue.js frontend with real-time Action Cable integration, deployed with Docker on DigitalOcean/Kubernetes.',
     image: 'https://placehold.co/800x600/1e293b/ffffff?text=Chatwoot',
     techStack: ['Vue.js', 'Ruby on Rails', 'Action Cable', 'Docker', 'TypeScript'],
+    privacy: true,
     links: {
       live: 'https://chatwoot.org',
       github: 'https://github.com/sanpila/chatwoot',
