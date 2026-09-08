@@ -271,7 +271,9 @@ export const projects: Project[] = [
       'The public-facing website for Orkun, a Cambodia-based home-service marketplace connecting customers with trusted local providers. It explains how to find, compare, and book services such as cleaning, repairs, moving, air-conditioner servicing, and photography. The site highlights scheduled bookings, certified vendors, direct communication, secure deposits, real-time updates, and customer support, with app screenshots and download calls to action. It also includes the company mission and vision, contact information, privacy policy, terms and conditions, search and social metadata, a sitemap, and responsive layouts for desktop and mobile.',
     image: '/projects/orkun-landing.png',
     techStack: ['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'jQuery', 'Swiper', 'Font Awesome'],
-    links: {},
+    links: {
+      live: 'https://orkun.app/',
+    },
     certificate: '/certificates/orkun-project.pdf',
   },
   {
@@ -283,8 +285,20 @@ export const projects: Project[] = [
     image: '/projects/ionecards.png',
     techStack: ['Nuxt.js 2', 'Vue.js', 'Vuex', 'Axios', 'Bootstrap', 'Vue I18n', 'PWA', 'JWT Authentication', 'iOneCards API'],
     links: {
-      live: 'https://ione-cards.com',
-      github: 'https://github.com/sanpila/ionecards',
+      live: 'https://www.ionecards.com/',
+      github: '',
+    },
+  },
+  {
+    id: 'ionecloud',
+    title: 'iOneCloud',
+    subtitle: 'Cloud Computing & Tech Solutions',
+    description:
+      'iOneCloud is Cambodia\'s premier cloud service provider, part of the iOne Group. It offers elastic cloud computing products including Elastic Cloud Server (ECS), Elastic IP Address (EIP), Cloud Server Backup Service (CSBS), Elastic Volume Service (EVS), Virtual Private Cloud (VPC), Virtual Firewall (vFW), Security Groups, and Virtual Private Network (VPN). Technology solutions include iOneGPT AI chatbot, SAP ERP hosting, DBaaS, and cPanel web hosting, serving enterprise customers with secure, reliable cloud infrastructure.',
+    image: '/projects/ionecloud.png',
+    techStack: ['WordPress', 'PHP', 'HTML5', 'CSS3', 'JavaScript', 'Tailwind CSS'],
+    links: {
+      live: 'https://ionecloud.com.kh/',
     },
   },
   {

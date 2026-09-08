@@ -78,6 +78,32 @@ import { projects } from '@/data/portfolioData'
                   {{ tech }}
                 </span>
               </div>
+
+              <div
+                v-if="project.links?.live"
+                class="flex items-center gap-4 pt-2"
+              >
+                <a
+                  :href="project.links.live"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-amber-500/20 border border-amber-400/30 rounded-lg hover:bg-amber-500/30 transition-colors"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 13H12V19L19.995 12 L12 5V11H18V13Z"
+                      fill="#FBBF24"
+                    />
+                  </svg>
+                  View Project
+                </a>
+              </div>
             </div>
           </div>
         </div>
