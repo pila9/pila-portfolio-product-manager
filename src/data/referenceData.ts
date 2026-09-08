@@ -11,7 +11,7 @@ export const references: Reference[] = [
   {
     name: 'Sokneang Ty',
     title: 'Production Manager / UXUI Lead',
-    company: 'Everlast & Apps Dev Co., Ltd',
+    company: 'Infinity Information & Apps Dev Co., Ltd',
     phone: '+855 12 789 710',
     email: 'sokneang0110@gmail.com',
     relationship: 'Former colleague and direct report',

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { personalInfo, roles, productSkills } from '@/data/portfolioData'
+import { personalInfo, productSkills } from '@/data/portfolioData'
 </script>
 
 <template>
@@ -22,25 +22,6 @@ import { personalInfo, roles, productSkills } from '@/data/portfolioData'
             <p class="text-base leading-relaxed">
               {{ personalInfo.bioLong }}
             </p>
-          </div>
-
-          <!-- Role Cards -->
-          <div class="grid sm:grid-cols-2 gap-4 pt-4">
-            <div
-              v-for="role in roles"
-              :key="role.id"
-              class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-4 hover:border-emerald-400/50 transition-all duration-300 group"
-            >
-              <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
-                <component :is="role.icon" class="w-5 h-5 text-emerald-400" />
-              </div>
-              <h3 class="text-lg font-semibold text-slate-100 mb-1 group-hover:text-emerald-400 transition-colors">
-                {{ role.title }}
-              </h3>
-              <p class="text-slate-400 text-sm">
-                {{ role.description }}
-              </p>
-            </div>
           </div>
         </div>
 

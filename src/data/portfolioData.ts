@@ -3,7 +3,6 @@ import {
   Code,
   Server,
   Package,
-  Target,
   Mail,
   MapPin,
   Phone,
@@ -97,7 +96,7 @@ export interface ExperienceItem {
   location: string
   period: string
   description: string
-  achievements: string[]
+  achievements?: string[]
 }
 
 export interface ContactInfo {
@@ -130,7 +129,7 @@ export interface EducationItem {
   period: string
   description?: string
   achievements?: string[]
-  type: 'degree' | 'training' | 'course'
+  type: 'degree' | 'training' | 'course' | 'high-school'
 }
 
 export const socialLinks: SocialLink[] = [
@@ -142,31 +141,24 @@ export const socialLinks: SocialLink[] = [
 
 export const roles: Role[] = [
   {
-    id: 'product-manager',
-    title: 'Product Manager',
-    description:
-      'Define product vision, roadmap priorities, and align feature development with business goals.',
-    icon: Target,
-  },
-  {
     id: 'product-owner',
     title: 'Product Owner',
     description:
-      'Lead product lifecycle from concept to launch, drive cross-functional teams, and deliver user-focused solutions.',
+      'Developed and maintained dynamic, responsive web applications using Vue.js, Nuxt.js, and React.js, with a focus on performance, scalability, and user experience. Translated business and user needs into clear product requirements, user stories, and acceptance criteria. Drove product vision and strategy, including roadmap planning, backlog management, and feature prioritization based on stakeholder and user needs. Managed and prioritized the Product Backlog and coordinated end-to-end product delivery through Agile/Scrum sprints. Collaborated with stakeholders, UI/UX designers, developers, QA, and technical teams to deliver high-quality product features. Conducted testing, debugging, maintenance, and performance optimization to improve application quality, stability, and usability. Integrated web applications with REST APIs and coordinated server integration and product deployments. Used Jira and GitLab for Agile task management, collaboration, version control, and development workflows. Collected user feedback, monitored product performance and KPIs, and continuously improved features based on data and user needs. Applied SEO best practices to improve website visibility, usability, and traffic. Participated in stakeholder meetings, providing both product and technical insights to support decision-making and product direction.',
     icon: Package,
   },
   {
     id: 'frontend-developer',
     title: 'Front-end Developer',
     description:
-      'Build responsive, accessible web applications with Vue.js, React, and modern UI frameworks.',
+      'Develop and maintain responsive, user-friendly web applications using React.js, JavaScript, HTML, and CSS. Build reusable and scalable UI components based on UI/UX designs and business requirements. Integrate REST APIs and work with backend teams to deliver functional web applications. Optimize application performance, usability, responsiveness, and cross-browser compatibility. Troubleshoot, debug, and fix frontend issues to ensure application quality and stability. Collaborate with Product, UI/UX, Backend, and QA teams throughout the development lifecycle.',
     icon: Code,
   },
   {
     id: 'web-developer',
     title: 'Web Developer',
     description:
-      'Develop and maintain web applications using modern technologies and best practices.',
+      'Develop, maintain, and enhance responsive and user-friendly websites and web applications. Build web interfaces using HTML, CSS, JavaScript, React.js, and other web technologies. Integrate REST APIs and work with backend services to deliver functional web solutions. Translate business and UI/UX requirements into practical web solutions. Troubleshoot, debug, and resolve technical issues to ensure website performance and stability. Optimize websites for performance, responsiveness, usability, and cross-browser compatibility. Collaborate with UI/UX, Product, Backend, QA, and other teams throughout the development lifecycle.',
     icon: Server,
   },
 ]
@@ -184,7 +176,7 @@ export const techTags = [
   'Git',
 ]
 
-export const resumeUrl = '/Pila-PO-FD.pdf'
+export const resumeUrl = '/San-Pila-CV.pdf'
 
 export const projects: Project[] = [
   {
@@ -437,25 +429,25 @@ export const skillCategories: SkillCategory[] = [
 export const experiences: ExperienceItem[] = [
   {
     id: 'pm-fedev',
-    role: 'Product Manager / Front-end Developer',
-    company: 'Everlast & Apps Dev Co., Ltd',
+    role: 'Product Owner and Front-end Developer',
+    company: 'Infinity Information & Apps Dev Co., Ltd',
     location: 'Phnom Penh, Cambodia',
     period: 'Jun 2022 — Present',
-    description:
-      'Led product vision and frontend delivery for BusinessFlow (Orkun), a platform that empowers multiple business teams while improving backend efficiency. Developed and maintained dynamic web applications with Vue.js, Nuxt.js, and React.js, combining product strategy with high-performance, responsive, scalable implementation.',
+    description: '',
     achievements: [
-      'Built, designed, and enhanced high-performance, responsive, and scalable web applications using Vue.js, Nuxt.js, and React.js',
-      'Led the product vision and strategy, defining roadmap priorities, refining the backlog, and aligning feature development with stakeholder needs',
-      'Managed the vision and execution of a platform solution that empowered multiple business teams and improved backend efficiency',
+      'Developed and maintained dynamic, responsive web applications using Vue.js, Nuxt.js, and React.js, with a focus on performance, scalability, and user experience.',
+      'Translated business and user needs into clear product requirements, user stories, and acceptance criteria.',
+      'Drove product vision and strategy, including roadmap planning, backlog management, and feature prioritization based on stakeholder and user needs.',
       'Owned and prioritized the product backlog, defined user stories, and partnered with cross-functional teams to deliver high-quality features in sprints',
       'Coordinated end-to-end product development, including sprint planning and backlog grooming',
-      'Defined KPIs, tracked delivery in Jira, and monitored post-deployment product metrics to guide feature iterations',
+      'Defined KPIs, tracked delivery in Jira, and monitored post-deployment product metrics to guide feature iteration and improvements',
       'Conducted systematic testing, debugging, and regular maintenance to improve application functionality, stability, and product quality',
       'Improved functionality and user experience through feedback-driven iteration and user testing',
-      'Applied SEO best practices to improve web visibility and traffic',
+      'Collected user feedback, monitored product performance and KPIs, and continuously improved features based on data and user needs.',
       'Collaborated with leadership in weekly stakeholder meetings, providing technical and product insights for decisions and project direction',
       'Streamlined deployment processes by overseeing server integration and seamless product releases',
-      'Optimized team workflows with Jira for Agile task tracking and GitLab for version control, improving transparency and cross-functional efficiency',
+      'Used Jira and GitLab for Agile task management, collaboration, version control, and development workflows.',
+      'Applied SEO best practices to improve web visibility and traffic',
     ],
   },
   {
@@ -464,8 +456,7 @@ export const experiences: ExperienceItem[] = [
     company: 'iOne Co., Ltd',
     location: 'Phnom Penh, Cambodia',
     period: 'Jan 2020 — May 2022',
-    description:
-      'Developed and maintained high-performance, responsive web applications with Laravel, PHP, MySQL, JavaScript, jQuery, Ajax, HTML/CSS3, Bootstrap, and Nuxt.js. Also contributed to Android development with Java and Kotlin, covering database analysis and design, testing, and continuous user-experience improvements.',
+    description: '',
     achievements: [
       'Built, designed, developed, and modified responsive web applications with Laravel, PHP, MySQL, JavaScript, jQuery, Ajax, HTML/CSS3, Bootstrap, and Nuxt.js',
       'Built the Nuxt.js iOneCards e-commerce platform with English and Khmer support and PWA capabilities',
@@ -474,7 +465,8 @@ export const experiences: ExperienceItem[] = [
       'Analyzed and designed databases to support application requirements and reliable data operations',
       'Conducted testing, identified bugs and errors, and performed maintenance to improve application functionality and stability',
       'Improved website functionality and user experience through iterative feedback, user testing, and bug resolution',
-      'Applied search engine optimization best practices to improve web visibility and traffic',
+      'Applied SEO best practices to improve web visibility and traffic',
+      'Collected user feedback, monitored product performance and KPIs, and continuously improved features based on data and user needs.',
       'Used GitLab for version control, code quality, and collaboration, and Jira for task tracking, project management, and workflow optimization',
     ],
   },
@@ -484,17 +476,18 @@ export const experiences: ExperienceItem[] = [
     company: 'Second Chance Co., Ltd',
     location: 'Phnom Penh, Cambodia',
     period: 'May 2018 — Dec 2019',
-    description:
-      'Developed web applications using ASP.NET MVC, ASP.NET Core, C#, SQL, JavaScript, jQuery, Ajax, and Bootstrap. Contributed to blockchain payment workflows using MetaMask and MyEtherWallet, while supporting custom templates, deployment, testing, and ongoing product improvements.',
+    description: ' ',
     achievements: [
       'Developed and maintained web applications with ASP.NET MVC, ASP.NET Core, C#, SQL, JavaScript, jQuery, Ajax, and Bootstrap',
       'Implemented blockchain payment transactions using MetaMask and MyEtherWallet',
       'Created custom web templates to meet project requirements and improve user experience',
-      'Collaborated with the team, providing technical and product insights to guide decisions and project direction',
       'Maintained and improved website functionality through iterative feedback and user testing',
       'Tested web applications, identified bugs and errors, and delivered fixes to improve stability',
-      'Used GitLab for version control, code quality, and collaboration; optimized workflows with Jira for Agile tracking and GitHub for version control',
-      'Oversaw server deployments to ensure seamless integration and reliable operation',
+      'Used GitLab for version control, code quality, and collaboration; optimized workflows.',
+      'Maintain and improve website functionality and user experience through iterative feedback and user testing.',
+      'Utilize GitLab for version control and project management, maintaining code quality and collaboration.',
+      'Oversee project deployment to the server, ensuring seamless integration and operation.',
+      'Test and finding out bug / error all web application',
       'Contributed to blockchain projects, attended an Intel IoT workshop in Malaysia, and interviewed candidates',
     ],
   },
@@ -504,27 +497,38 @@ export const experiences: ExperienceItem[] = [
     company: 'Lastmile Co., Ltd',
     location: 'Phnom Penh, Cambodia',
     period: 'Apr 2017 — Apr 2018',
-    description:
-      'Spearheaded end-to-end development of 2D/3D applications (Mobile/Windows) and Mixed Reality (VR) experiences. Led UI/UX design for immersive environments, creating intuitive interfaces and animations to enhance user engagement.',
+    description: '',
     achievements: [
-      'Spearheaded end-to-end development of 2D/3D applications (Mobile/Windows) and Mixed Reality (VR) experiences, aligning technical execution with user needs and business objectives.',
-      'Led UI/UX design for immersive environments, creating intuitive 2D/3D interfaces and animations to enhance user engagement.',
-      'Optimized performance through lightweight packaging, performance profiling, and iterative testing (e.g., frame rate optimization, asset compression).',
-      'Learn and research new function, new technology related to real estate.'
+      'Led full lifecycle development of 2D/3D applications for Mobile and Windows platforms',
+      'Designed UI/UX for immersive VR environments with intuitive interfaces and animations',
+      'Optimized performance through lightweight packaging, profiling, and iterative testing (frame rate optimization, asset compression)',
+      'Conducted research on new technologies related to real estate VR applications',
     ],
   },
   {
     id: 'ecommerce-freelance',
     role: 'E-Commerce & Digital Product Development',
-    company: 'Not on University',
+    company: 'Norton University',
     location: 'Phnom Penh, Cambodia',
     period: 'Sep 2016 — Sep 2016',
-    description:
-      'Led end-to-end development of Angkor Color Construction online shop and an exhibition website. Designed customer-centric e-commerce platform to drive sales and user engagement.',
+    description: ' ',
     achievements: [
       'Led end-to-end development of online e-commerce platform for Angkor Color Construction',
       'Built and optimized exhibition website to showcase products, improve brand visibility, and generate leads',
       'Collaborated with marketing and sales teams to align web features with business objectives',
+    ],
+  },
+  {
+    id: 'game-freelance',
+    role: 'Mobile Game Development & Product Strategy ',
+    company: 'Norton University',
+    location: 'Phnom Penh, Cambodia',
+    period: 'Oct 2015 — Oct 2015',
+    description: ' ',
+    achievements: [
+      'Led the full product lifecycle of Image Puzzle Game, from concept to launch, delivering an engaging and intuitive puzzle experience for Android users.',
+      'Designed and developed the Exhibition Image Puzzle Game app, optimizing performance and user retention through iterative testing and updates.',
+      'Analyzed player behavior and feedback to refine game mechanics, difficulty levels, and in-app features for enhanced engagement.',
     ],
   },
 ]
@@ -577,12 +581,11 @@ export const certificates: Certificate[] = [
 
 export const personalInfo = {
   name: 'San Pila',
-  title: 'Product Manager | Product Owner | Front-end Developer | Web Developer',
+  title: 'Product Manager| Product Owner | Front-end Developer | Web Developer',
   tagline: 'Building Scalable Web Applications & Digital Products',
-  bio: 'Product Manager and Frontend Developer with 8+ years of experience in software development, web applications, and digital products. Skilled in React.js, Vue.js, Nuxt.js, TypeScript, Node.js, PHP, Laravel, and MySQL, with strong background in Agile/Scrum, Jira, Git, testing, and deployment.',
+  bio: '',
   bioLong:
-    "I have more than 8 years of experience in software development, web applications, frontend development, and digital product development. Currently, I work as a Product Manager and Frontend Developer, combining technical expertise with product and business responsibilities.\n\nI have experience working with stakeholders and cross-functional teams to gather and analyze requirements, define product priorities, manage roadmaps and backlogs, plan sprints, and deliver digital products. I work closely with development teams to translate business and user needs into clear and practical solutions.\n\nWith my technical background in React.js, Vue.js, Nuxt.js, JavaScript, TypeScript, Node.js, PHP, Laravel, and MySQL, I can communicate effectively with technical teams and understand both business and development perspectives. I am also experienced with Agile/Scrum, Jira, Git, testing, debugging, and deployment.\n\nI am a motivated and adaptable professional who enjoys solving problems, improving products, and creating solutions that deliver value to both users and businesses.",
-  email: 'pilasan19@gmail.com',
+    "Product Manager / Product Owner with experience in product management, software development, frontend development, and web applications. Skilled in product requirements, roadmap planning, backlog prioritization, user stories, acceptance criteria, Agile/Scrum, stakeholder collaboration, product testing, and continuous improvement. Strong technical background in Vue.js, Nuxt.js, React.js, JavaScript, API integration, and responsive web application development, enabling effective collaboration between business and engineering teams. Experienced in translating business and user needs into practical technical solutions and supporting digital products from planning and development through testing, deployment, and continuous improvement.",
   profileImage: '/personalInfo/profileImage.png',
 }
 
@@ -602,13 +605,13 @@ export const productSkills: ProductSkill[] = [
   {
     id: 'documentary',
     name: 'Documentation',
-    level: 70,
+    level: 60,
     description: 'User stories, acceptance criteria, project documentation, and process standardization',
   },
   {
     id: 'research',
     name: 'Research & Analysis',
-    level: 70,
+    level: 80,
     description: 'Market research, user analysis, feature iteration, and data-driven product decisions',
   },
 ]
@@ -616,22 +619,22 @@ export const productSkills: ProductSkill[] = [
 export const education: EducationItem[] = [
   {
     id: 'pannasastra',
-    degree: 'Computer Science Bachelor Degree',
+    degree: 'English short courses',
     institution: 'Pannasastra University of Cambodia (PUC)',
     period: '2015 — 2017',
-    description: 'Also took English short courses.',
     type: 'degree',
   },
   {
     id: 'norton',
-    degree: 'Science, Also Outstanding student, class monitor',
+    degree: 'Computer Science Bachelor Degree',
     institution: 'Norton University',
     period: '2012 — 2016',
+    description: 'Also Outstanding student, class monitor',
     type: 'degree',
   },
   {
     id: 'kampong-trabek',
-    degree: 'Science',
+    degree: 'Science | Highschool',
     institution: 'Kampong Trabek High School',
     period: '2009 — 2012',
     type: 'degree',
